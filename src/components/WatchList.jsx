@@ -52,10 +52,11 @@ const WatchList = () => {
           {watchedCoins.map((currency) => (
             <Col xs={24} sm={12} lg={6} className="crypto-card" key={currency.uuid}>
               <Card
-                title={
+                title={(
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <span>{currency.rank}. {currency.name}</span>
                     <button
+                      type="button"
                       className="watchlist-star active"
                       onClick={(e) => {
                         e.preventDefault();
@@ -66,7 +67,7 @@ const WatchList = () => {
                       ★
                     </button>
                   </div>
-                }
+                )}
                 extra={<img className="crypto-image" src={currency.iconUrl} alt={currency.name} />}
                 hoverable
               >

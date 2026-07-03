@@ -62,10 +62,11 @@ const Cryptocurrencies = ({ simplified }) => {
             key={currency.uuid}
           >
             <Card
-              title={
+              title={(
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <span>{currency.rank}. {currency.name}</span>
                   <button
+                    type="button"
                     className={`watchlist-star ${watchlist.includes(currency.uuid) ? 'active' : 'inactive'}`}
                     onClick={(e) => {
                       e.preventDefault();
@@ -77,7 +78,7 @@ const Cryptocurrencies = ({ simplified }) => {
                     {watchlist.includes(currency.uuid) ? '★' : '☆'}
                   </button>
                 </div>
-              }
+              )}
               extra={<img className="crypto-image" src={currency.iconUrl} alt={currency.name} />}
               hoverable
             >

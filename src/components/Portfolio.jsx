@@ -39,7 +39,7 @@ const Portfolio = () => {
       name: coin.name,
       symbol: coin.symbol,
       iconUrl: coin.iconUrl,
-      quantity: quantity,
+      quantity,
       buyPrice: buyPrice || parseFloat(coin.price),
     };
 
